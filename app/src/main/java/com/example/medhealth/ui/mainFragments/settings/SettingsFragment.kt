@@ -22,6 +22,7 @@ import com.example.medhealth.model.SettingsState
 import com.example.medhealth.ui.adapter.SettingsAdapter
 import com.example.medhealth.ui.auth.signInScreen.SignInScreen
 import com.example.medhealth.ui.mainFragments.settings.prescription.AddPrescriptionActivity
+//import com.example.medhealth.ui.mainFragments.settings.upi.UPImanager
 import com.example.medhealth.ui.profile.ProfileActivity
 import com.example.medhealth.utils.Constants
 import com.example.medhealth.utils.DialogUtil.createBottomSheet
@@ -70,7 +71,7 @@ class SettingsFragment : Fragment() {
         settingsItemList.apply {
             add(SettingsItem(0, R.drawable.edit_profile, getString(R.string.edit_profile)))
             add(SettingsItem(1, R.drawable.upload_prescription, getString(R.string.upload_prescription)))
-            add(SettingsItem(2, R.drawable.upi_id, getString(R.string.upi_qr)))
+//            add(SettingsItem(2, R.drawable.upi_id, getString(R.string.upi_qr)))
             add(SettingsItem(3, R.drawable.info, getString(R.string.about_us)))
             add(SettingsItem(4, R.drawable.feedback, getString(R.string.feedback)))
             add(SettingsItem(5, R.drawable.need_help, getString(R.string.need_help)))
@@ -94,7 +95,7 @@ class SettingsFragment : Fragment() {
 
 //                    SettingsState.getSettingsState(SettingsState.TO_UPI_QR) -> {
 //                        startActivity(Intent(requireActivity(), UPImanager::class.java))
-//                    }
+//                  }
 
                     SettingsState.getSettingsState(SettingsState.TO_ABOUT_US) -> {
                         aboutUs()
