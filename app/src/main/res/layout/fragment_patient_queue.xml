@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient_background"
+    android:background="@drawable/_090ff"
     tools:context=".ui.mainFragments.appointments.PatientQueueFragment">
 
     <TextView
@@ -26,7 +26,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:fontFamily="@font/dm_sans_medium"
-        android:textColor="@color/green_shade_light_2"
+        android:textColor="@color/white"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@+id/patient_queue_text"
         app:layout_constraintTop_toBottomOf="@+id/patient_queue_text"
@@ -62,8 +62,10 @@
             android:layout_height="0dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
             tools:listitem="@layout/patient_list" />
 
         <TextView
@@ -73,7 +75,7 @@
             android:layout_marginHorizontal="16dp"
             android:fontFamily="@font/dm_sans_bold"
             android:textAlignment="center"
-            android:textColor="@color/green_shade_dark_1"
+            android:textColor="@color/black"
             android:textSize="25sp"
             android:visibility="gone"
             app:layout_constraintBottom_toBottomOf="parent"

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient_background"
+    android:background="@drawable/_090ff"
     tools:context=".ui.profile.EditProfileActivity">
 
     <TextView
@@ -59,7 +59,7 @@
                     android:layout_marginBottom="25dp"
                     android:fontFamily="@font/dm_sans_bold"
                     android:text="Update your details"
-                    android:textColor="@color/green_shade_dark_1"
+                    android:textColor="@color/light_blue"
                     android:textSize="22sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
