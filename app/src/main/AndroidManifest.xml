@@ -1,70 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
-
-    <uses-feature
-        android:name="android.hardware.telephony"
-        android:required="false" />
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.metelehealth">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_CALENDAR" />
+    <uses-permission android:name="android.permission.WRITE_CALENDAR" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
 
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@drawable/medify_logo"
+        android:icon="@mipmap/home_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@drawable/medify_logo"
+        android:roundIcon="@mipmap/home_launcher"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Medify"
+        android:theme="@style/Theme.FirenaseLogin"
         tools:targetApi="31">
         <activity
-            android:name=".ui.auth.forgotPassword.ForgotPasswordActivity"
+            android:name=".GroupTherapyActivity"
             android:exported="true" />
         <activity
-            android:name=".ui.profile.EditProfileActivity"
-            android:exported="true" />
-        <activity
-            android:name=".ui.profile.ProfileActivity"
-            android:exported="true" />
-        <activity
-            android:name=".ui.mainFragments.settings.prescription.AddPrescriptionActivity"
-            android:exported="true" />
-        <activity
-            android:name=".ui.mainFragments.settings.upi.UPImanager"
-            android:exported="true" />
-        <activity
-            android:name=".ui.introduction.Splashscreen"
+            android:name=".MainActivity"
             android:exported="true">
+        </activity>
+        <activity
+            android:name=".SignUpActivity"
+            android:exported="true"/>
+        <activity
+            android:name="com.example.metelehealth.BookAppointmentActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.example.metelehealth.CalenderActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.example.metelehealth.DoctorsProfileActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.example.metelehealth.EmergencyActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.example.metelehealth.HospitalLocationActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.example.metelehealth.IDoctorActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.example.metelehealth.LegalSupportActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.example.metelehealth.PrescriptionActivity"
+            android:exported="true" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".ui.auth.signUpScreen.firstScreen.SignUpFirstScreen"
-            android:exported="true" />
-        <activity
-            android:name=".ui.auth.signInScreen.SignInScreen"
-            android:exported="true"
-            android:windowSoftInputMode="stateHidden|adjustResize" />
-        <activity
-            android:name=".ui.auth.signUpScreen.SecondScreen.SignUpSecondScreen"
-            android:exported="true"
-            android:windowSoftInputMode="stateHidden|adjustResize" />
-        <activity
-            android:name=".ui.HomeActivity"
-            android:exported="true"
-            android:windowSoftInputMode="adjustPan" />
-
-        <meta-data
-            android:name="preloaded_fonts"
-            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>
