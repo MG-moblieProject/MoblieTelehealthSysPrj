@@ -1,4 +1,4 @@
 package com.example.metelehealth.model
 
-data class EmergencyNumbers(val county : String, val town: String, val call : String) {
+data class EmergencyNumbers(val district : String, val hosp: String, val call : String) {
 }

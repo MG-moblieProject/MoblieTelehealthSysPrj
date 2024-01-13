@@ -48,7 +48,7 @@ class HospitalLocationActivity : AppCompatActivity() {
             }
         }
         mapview.settings.javaScriptEnabled = true
-        mapview.loadUrl("https://bit.ly/3OlRNlP")
+        mapview.loadUrl("https://short.com.vn/4Kha")
         mapview.settings.supportZoom()
     }
 }

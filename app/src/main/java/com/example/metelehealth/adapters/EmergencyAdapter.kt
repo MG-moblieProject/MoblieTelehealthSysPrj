@@ -41,8 +41,8 @@ class EmergencyAdapter (
     // get current number, county and hospital and map int to the holder
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val currentNumber = mList[position]
-        holder.tvCounty.text =currentNumber.county
-        holder.tvTown.text = currentNumber.town
+        holder.tvCounty.text =currentNumber.district
+        holder.tvTown.text = currentNumber.hosp
     }
 
     // get the total list of numbers in the arrays
