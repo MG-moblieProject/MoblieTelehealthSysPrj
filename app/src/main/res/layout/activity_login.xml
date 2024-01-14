@@ -38,6 +38,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
+            android:backgroundTint="#0096FF"
             android:text="@string/login" />
 
         <androidx.appcompat.widget.LinearLayoutCompat
@@ -51,6 +52,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:layout_weight="1"
+                android:backgroundTint="#0096FF"
                 android:text="@string/emergency" />
 
             <Button
@@ -59,6 +61,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:layout_weight="1"
+                android:backgroundTint="#0096FF"
                 android:text="@string/sign_up" />
 
         </androidx.appcompat.widget.LinearLayoutCompat>

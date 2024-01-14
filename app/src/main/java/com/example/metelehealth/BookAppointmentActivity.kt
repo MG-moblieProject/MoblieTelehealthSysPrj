@@ -39,19 +39,17 @@ class BookAppointmentActivity : AppCompatActivity() {
             progressDialog.show()
 
             val fullName = binding.etAppointmentNames.text.toString()
-            val nHIF = binding.etAppointmentNHIFStatus.text.toString()
             val reason = binding.etAppointmentReason.text.toString()
             val date = binding.etAppointmentDate.text.toString()
             val phone = binding.etAppointmentNumber.text.toString()
 
             database = FirebaseDatabase.getInstance().getReference("Appointments")
 
-            val bookAppointment = BookAppointment(fullName,nHIF,reason,date,phone)
+            val bookAppointment = BookAppointment(fullName,reason,date,phone)
 
             database.child(fullName).setValue(bookAppointment).addOnSuccessListener {
 
                 binding.etAppointmentNames.text.clear()
-                binding.etAppointmentNHIFStatus.text.clear()
                 binding.etAppointmentReason.text.clear()
                 binding.etAppointmentDate.text.clear()
                 binding.etAppointmentNumber.text.clear()
