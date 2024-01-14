@@ -15,6 +15,7 @@ import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import com.example.metelehealth.MainActivity
 import com.example.metelehealth.R
+import com.example.metelehealth.data.GroupMeeting
 import com.example.metelehealth.databinding.ActivityBookAppointmentBinding
 import com.example.metelehealth.model.BookAppointment
 import java.util.*
@@ -22,7 +23,7 @@ import java.util.*
 class BookAppointmentActivity : AppCompatActivity() {
 
     private lateinit var binding : ActivityBookAppointmentBinding
-    private  lateinit var database : DatabaseReference
+    private lateinit var database : DatabaseReference
 
     lateinit var progressDialog : ProgressDialog
 
@@ -30,6 +31,17 @@ class BookAppointmentActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityBookAppointmentBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        val today = Calendar.getInstance()  //get the date to pick
+        val yearBooked = today.get(Calendar.YEAR)
+        val monthBooked = today.get(Calendar.MONTH)
+        val dayBooked = today.get(Calendar.DAY_OF_MONTH)
+        binding.etAppointmentDate.setOnClickListener{
+            val datePickerDialog = DatePickerDialog(this, DatePickerDialog.OnDateSetListener{ view, year, month, dayOfMonth ->
+                binding.etAppointmentDate.text ="" + dayOfMonth + "/" + (month + 1) + "/" + year
+            }, yearBooked,monthBooked,dayBooked)
+            datePickerDialog.show()
+        }
 
         binding.btnBookAppointment.setOnClickListener {
 
@@ -40,31 +52,38 @@ class BookAppointmentActivity : AppCompatActivity() {
 
             val fullName = binding.etAppointmentNames.text.toString()
             val reason = binding.etAppointmentReason.text.toString()
-            val date = binding.etAppointmentDate.text.toString()
             val phone = binding.etAppointmentNumber.text.toString()
+            val date = binding.etAppointmentDate.text.toString()
 
-            database = FirebaseDatabase.getInstance().getReference("Appointments")
+            val zoomMeetingDate = GroupMeeting(fullName, reason, null, date)
 
-            val bookAppointment = BookAppointment(fullName,reason,date,phone)
+            // Store Zoom meeting details in the "zoomMeetings" node
+            val zoomMeetingsRef = FirebaseDatabase.getInstance().getReference("zoomMeetings")
+            val newZoomMeetingRef = zoomMeetingsRef.push()
+            newZoomMeetingRef.setValue(zoomMeetingDate).addOnSuccessListener {
+                database = FirebaseDatabase.getInstance().getReference("Appointments")
 
-            database.child(fullName).setValue(bookAppointment).addOnSuccessListener {
+                val bookAppointment = BookAppointment(fullName,reason,date,phone)
 
-                binding.etAppointmentNames.text.clear()
-                binding.etAppointmentReason.text.clear()
-                binding.etAppointmentDate.text.clear()
-                binding.etAppointmentNumber.text.clear()
+                database.child(fullName).setValue(bookAppointment).addOnSuccessListener {
 
-                Toast.makeText(this,"Session book successfully....", Toast.LENGTH_LONG).show()
+                    binding.etAppointmentNames.text.clear()
+                    binding.etAppointmentReason.text.clear()
+                    binding.etAppointmentNumber.text.clear()
+                    Toast.makeText(this,"Session book successfully....", Toast.LENGTH_LONG).show()
+                    progressDialog.dismiss()
 
+                }.addOnFailureListener {
+                    Toast.makeText(this,"Book again....Failed", Toast.LENGTH_LONG).show()
+                    progressDialog.dismiss()
 
-                progressDialog.dismiss()
-
+                }
             }.addOnFailureListener {
-
-                Toast.makeText(this,"Book again....Failed", Toast.LENGTH_LONG).show()
+                Toast.makeText(this, "Failed to book Zoom meeting.", Toast.LENGTH_LONG).show()
                 progressDialog.dismiss()
-
             }
+
+
         }
 
     }

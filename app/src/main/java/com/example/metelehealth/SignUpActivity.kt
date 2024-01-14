@@ -5,8 +5,10 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import com.example.metelehealth.data.Users
 import com.google.firebase.auth.FirebaseAuth
 import com.example.metelehealth.databinding.ActivitySignUpBinding
+import com.google.firebase.database.FirebaseDatabase
 
 class SignUpActivity : AppCompatActivity() {
     private lateinit var binding: ActivitySignUpBinding
@@ -32,6 +34,8 @@ class SignUpActivity : AppCompatActivity() {
         binding.btnCreateUserAccountf.setOnClickListener {
 
             val userEmail = binding.etSignupUserEmail.text.toString()
+            val userAge = binding.etUserAge.text.toString()
+            val userFullName = binding.etUserFullName.text.toString()
             val password = binding.etUsersignupPassword.text.toString()
             val confirmPswd = binding.etSignupConfirmPswd.text.toString()
 
@@ -40,12 +44,27 @@ class SignUpActivity : AppCompatActivity() {
                 progressDialog.show()
                     if (password == confirmPswd) {
                         firebaseAuth.createUserWithEmailAndPassword(userEmail, password)
-                            .addOnCompleteListener {
-                                if (it.isSuccessful) {
-                                    progressDialog.dismiss()
-                                    // sign up user on success
-                                    val intent = Intent(this, LoginActivity::class.java)
-                                    startActivity(intent)
+                            .addOnCompleteListener {authTask ->
+                                if (authTask.isSuccessful) {
+                                    val currentUser = firebaseAuth.currentUser
+                                    val databaseInsert = FirebaseDatabase.getInstance().getReference("users/${currentUser?.uid}")
+
+                                    val user = Users(email= userEmail,fullName = userFullName, age = userAge)
+
+                                    databaseInsert.setValue(user)
+                                        .addOnCompleteListener { databaseTask ->
+                                            progressDialog.dismiss()
+                                            if(databaseTask.isSuccessful){
+                                                // sign up user on success
+                                                val intent = Intent(this, LoginActivity::class.java)
+                                                startActivity(intent)
+                                            } else {
+                                                Toast.makeText(this, "Error adding user to the database!",
+                                                    Toast.LENGTH_LONG
+                                                ).show()
+                                            }
+                                    }
+
                                 } else {
                                     progressDialog.dismiss()
                                     Toast.makeText(this, "Correct the Errors..!", Toast.LENGTH_LONG)
@@ -60,11 +79,13 @@ class SignUpActivity : AppCompatActivity() {
                     }
             }else{
                 if(userEmail.isEmpty()){
-                    binding.etSignupUserEmail.error = "Enter email"
+                    binding.etSignupUserEmail.error = "Please enter your email"
                 }else if(password.isEmpty()){
                     binding.etUsersignupPassword.error = "Password cannot be empty"
                 }else if(confirmPswd.isEmpty()){
-                    binding.etSignupConfirmPswd.error = "Cannot be empty"
+                    binding.etSignupConfirmPswd.error = "Please enter password confirmation"
+                }else if (userFullName.isEmpty()){
+                    binding.etUserFullName.error = "Please enter your full name"
                 }
             }
 

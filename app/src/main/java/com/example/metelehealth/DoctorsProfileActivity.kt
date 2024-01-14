@@ -33,7 +33,7 @@ class DoctorsProfileActivity : AppCompatActivity() {
             R.drawable.group3
         )
         doctorName = arrayOf(
-                "Dr. Timz Owen",
+                "Dr. Xuan Thu",
                 "Dr. Allan Kipkosgei",
                 "DR. Marini Clement",
                 "Dr. Julia",
@@ -45,7 +45,7 @@ class DoctorsProfileActivity : AppCompatActivity() {
                 "Dr.Laura"
         )
         doctorQuote = arrayOf(
-            "Health is welath",
+            "Sức Khỏe Là Vàng",
             "Health is everything",
             "We cure God heals",
             "Therapy solves it",

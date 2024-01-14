@@ -46,6 +46,23 @@
         android:layout_height="wrap_content"
         android:hint="@string/enter_your_email"/>
     <EditText
+        android:id="@+id/et_user_full_name"
+        android:layout_width="match_parent"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:textColorHint="@color/black"
+        android:layout_height="wrap_content"
+        android:hint="@string/enter_your_full_name"/>
+    <EditText
+        android:id="@+id/et_user_age"
+        android:layout_width="match_parent"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:textColorHint="@color/black"
+        android:layout_height="wrap_content"
+        android:hint="@string/enter_your_age"
+        android:inputType="number"/>
+    <EditText
         android:id="@+id/et_usersignup_password"
         android:layout_width="match_parent"
        android:layout_marginStart="10dp"

@@ -69,12 +69,14 @@
             android:textStyle="bold"
             android:text="@string/your_date_of_availability"/>
 
-        <EditText
+        <TextView
             android:id="@+id/et_appointmentDate"
-            android:hint="@string/date_month_year"
             android:layout_width="match_parent"
-            android:inputType="text"
             android:layout_height="wrap_content"
+            android:hint="@string/date_month_year"
+            android:inputType="none"
+            android:clickable="true"
+            android:focusable="false"
             android:autofillHints="patient" />
         <TextView
             android:layout_width="wrap_content"

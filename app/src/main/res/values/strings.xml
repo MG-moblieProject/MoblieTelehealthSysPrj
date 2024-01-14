@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">iDoctor</string>
+    <string name="app_name">Doctor</string>
     <string name="my_Online_Doctor">MedHealth</string>
     <string name="my_calendar">My calendar</string>
     <string name="hospitals">Hospitals</string>
@@ -9,7 +9,7 @@
     <string name="prescription">Prescription</string>
     <string name="therapy">therapy</string>
     <string name="medication">medication</string>
-    <string name="calendar">Calendar</string>
+    <string name="calendar">Booking</string>
     <string name="idoctor">Doctor</string>
     <string name="legal_support">Legal Support</string>
     <string name="group_therapy">Group Therapy</string>
@@ -57,7 +57,7 @@
     <string name="username">UserName:</string>
     <string name="administered">Administered:</string>
     <string name="duration">Duration</string>
-    <string name="enter_name">Enter Name</string>
+    <string name="enter_name">Enter User Email</string>
     <string name="name">Name</string>
     <string name="administration_times">Administration times</string>
     <string name="medicine">Medicine</string>
@@ -95,7 +95,9 @@
     <string name="sexual_health_awareness">Sexual Health Awareness</string>
     <string name="topic_option">Topic:</string>
     <string name="enter_your_email">Enter your Email</string>
+    <string name="enter_your_full_name">Enter your full name</string>
     <string name="enter_your_password">Enter your password</string>
+    <string name="enter_your_age">Enter your age</string>
     <string name="confirm_pasword">Confirm pasword</string>
     <string name="permission_required">Permission required</string>
     <string name="ok">Ok</string>

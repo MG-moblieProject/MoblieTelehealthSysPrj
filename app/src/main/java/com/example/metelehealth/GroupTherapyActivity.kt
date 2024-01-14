@@ -39,7 +39,7 @@ class GroupTherapyActivity : AppCompatActivity(), GroupTherapyAdapter.OnItemClic
 
     }
     private fun getAllMeetings(){
-        dbRef = FirebaseDatabase.getInstance().getReference("ZoomMeetings")
+        dbRef = FirebaseDatabase.getInstance().getReference("zoomMeetings")
         progressDialog = ProgressDialog(this)
         progressDialog.setMessage("Fetching data.....")
         progressDialog.setCancelable(false)

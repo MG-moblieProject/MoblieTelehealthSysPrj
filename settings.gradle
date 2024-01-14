@@ -12,5 +12,5 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-rootProject.name = "firenaseLogin"
+rootProject.name = "medHealth"
 include ':app'
