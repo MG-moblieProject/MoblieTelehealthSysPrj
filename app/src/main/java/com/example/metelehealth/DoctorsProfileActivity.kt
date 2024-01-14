@@ -33,28 +33,28 @@ class DoctorsProfileActivity : AppCompatActivity() {
             R.drawable.group3
         )
         doctorName = arrayOf(
-                "Dr. Xuan Thu",
-                "Dr. Allan Kipkosgei",
-                "DR. Marini Clement",
-                "Dr. Julia",
-                "Dr. Esther",
-                "Dr. Irene",
-                "Dr. Kamau",
-                "Dr. Kipkebut",
-                "Dr.Masese",
-                "Dr.Laura"
+                "Dr. Nguyễn Ngọc Bách",
+                "Dr. Vương Ngọc Thiên Thanh",
+                "DR. Ngọc Thành Đạt",
+                "Dr. Vũ Thiên Ân",
+                "Dr. Võ Thị Minh Tuyền",
+                "Dr. Nguyễn Xuân Thúy Quỳnh",
+                "Dr. Nguyễn Chấn Hùng",
+                "Dr. Nguyễn Sào Trung",
+                "Dr.Trần Văn Thiệp",
+                "Dr.Vũ Văn Vũ"
         )
         doctorQuote = arrayOf(
             "Sức Khỏe Là Vàng",
-            "Health is everything",
-            "We cure God heals",
-            "Therapy solves it",
-            "Health eating is all",
-            "We are family medicine",
-            "Let's talk about us",
-            "Health eating is all",
-            "We are family medicine",
-            "Let's talk about us"
+            "Sức khỏe là tất cả",
+            "Chúng tôi chữa bệnh, Chúa chữa lành",
+            "Liệu trình giải quyết mọi thứ",
+            "Ăn uống lành mạnh là chìa khóa cho mọi vấn đề",
+            "Chúng tôi là thầy thuốc của mọi gia đình",
+            "Hãy nói tôi nghe thêm về bạn",
+            "Mang trong mình trọng trách solo tay đôi với tử thần",
+            "Sức khỏe của các bạn là thứ chúng tôi bảo đảm",
+            "Vì một Việt Nam khỏe mạnh"
             )
 
         recyclerView = findViewById(R.id.recycler_profile_doctors)

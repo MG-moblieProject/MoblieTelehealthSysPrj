@@ -33,7 +33,7 @@
 
     <EditText
         android:id="@+id/et_hospName"
-        android:hint="@string/hospital_name"
+        android:hint="@string/hospital_city"
         android:layout_width="match_parent"
         android:inputType="text"
         android:layout_height="wrap_content"
@@ -48,7 +48,7 @@
 
     <EditText
         android:id="@+id/et_type_of_case"
-        android:hint="@string/charges_or_abuse_or_sexual_or_mistreat"
+        android:hint="@string/fever_cough_fatigue"
         android:layout_width="match_parent"
         android:inputType="text"
         android:layout_height="wrap_content"
@@ -59,7 +59,7 @@
         android:layout_gravity="center"
         android:layout_margin="10dp"
         android:textStyle="bold"
-        android:text="@string/date_occured"/>
+        android:text="@string/test_date"/>
 
     <TextView
         android:id="@+id/et_date_occurrence"
@@ -71,21 +71,6 @@
         android:focusableInTouchMode="false"
         android:layout_height="wrap_content"
         android:autofillHints="Hospital" />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_margin="10dp"
-        android:textStyle="bold"
-        android:text="@string/who_was_involve_in_the_case"/>
-
-    <EditText
-        android:id="@+id/et_victim_involved"
-        android:hint="@string/patient_doctorb_manager_security"
-        android:layout_width="match_parent"
-        android:inputType="text"
-        android:layout_height="wrap_content"
-        android:autofillHints="patient" />
 
     <TextView
         android:layout_width="wrap_content"

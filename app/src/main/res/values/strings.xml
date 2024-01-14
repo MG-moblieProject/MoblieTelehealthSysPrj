@@ -11,8 +11,8 @@
     <string name="medication">medication</string>
     <string name="calendar">Booking</string>
     <string name="idoctor">Doctor</string>
-    <string name="legal_support">Legal Support</string>
-    <string name="group_therapy">Group Therapy</string>
+    <string name="legal_support">Covid Support</string>
+    <string name="group_therapy">Meeting List</string>
     <string name="schedule_check_up">Schedule Check up</string>
     <string name="welcome_to_your_activities">ACTIVITIES</string>
     <string name="bg">bg</string>
@@ -29,12 +29,12 @@
     <string name="zoom">zoom</string>
     <string name="doctors_name">Doctors name:</string>
     <string name="here_from_me">Here from me</string>
-    <string name="hospital_name">Hospital Name / Branch /town</string>
+    <string name="hospital_city">City</string>
     <string name="report_your_case_here">COVID SUPPORT</string>
-    <string name="type_of_case">Type of Case</string>
-    <string name="charges_or_abuse_or_sexual_or_mistreat">Charges or Abuse or sexual or Mistreat</string>
+    <string name="type_of_case">Symptoms</string>
+    <string name="fever_cough_fatigue">Fever / Cough / Fatigue /...</string>
     <string name="date_of_occurrence">Date / Month / Year</string>
-    <string name="date_occured">Date of Incident</string>
+    <string name="test_date">Test Date</string>
     <string name="who_was_involve_in_the_case">Who was involve?</string>
     <string name="patient_doctorb_manager_security">Patient/ doctor/ manager / security ?</string>
     <string name="submit_case">Submit Case</string>
