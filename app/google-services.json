@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "84089333977",
+    "firebase_url": "https://metele-d6a1e-default-rtdb.firebaseio.com",
+    "project_id": "metele-d6a1e",
+    "storage_bucket": "metele-d6a1e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:84089333977:android:2faeeef44e9fe80b1ef6c8",
+        "android_client_info": {
+          "package_name": "com.example.medhealth"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCoHkK4MWgbD9O93szWPDMKP2o616WUJaU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:84089333977:android:b084325f12e6d5021ef6c8",
+        "android_client_info": {
+          "package_name": "com.example.metelehealth"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCoHkK4MWgbD9O93szWPDMKP2o616WUJaU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

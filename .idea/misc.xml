@@ -1,0 +1,32 @@
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="../../../../layout/custom_preview.xml" value="0.10847628657921292" />
+        <entry key="app/src/main/res/layout/activity_book_appointment.xml" value="0.31197916666666664" />
+        <entry key="app/src/main/res/layout/activity_calender.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_doctos_profile.xml" value="0.31197916666666664" />
+        <entry key="app/src/main/res/layout/activity_emergency.xml" value="0.2140625" />
+        <entry key="app/src/main/res/layout/activity_group_therapy.xml" value="0.335" />
+        <entry key="app/src/main/res/layout/activity_hospital_location.xml" value="0.20104166666666667" />
+        <entry key="app/src/main/res/layout/activity_idoctor.xml" value="0.31197916666666664" />
+        <entry key="app/src/main/res/layout/activity_legal_support.xml" value="0.31197916666666664" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.335" />
+        <entry key="app/src/main/res/layout/activity_prescription.xml" value="0.31197916666666664" />
+        <entry key="app/src/main/res/layout/activity_sign_up.xml" value="0.31197916666666664" />
+        <entry key="app/src/main/res/layout/doctor_profile_layout.xml" value="0.335" />
+        <entry key="app/src/main/res/layout/emergeny_layout_list.xml" value="0.31197916666666664" />
+        <entry key="app/src/main/res/layout/group_therapy_layout.xml" value="0.20104166666666667" />
+        <entry key="app/src/main/res/layout/grouptherapy_layout.xml" value="0.31197916666666664" />
+        <entry key="app/src/main/res/menu/menu.xml" value="0.29583333333333334" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="jbr-17" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
