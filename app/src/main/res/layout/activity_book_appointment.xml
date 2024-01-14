@@ -11,7 +11,7 @@
         android:orientation="vertical"
         android:layout_margin="5dp"
         android:layout_height="wrap_content"
-        tools:context=".LegalSupportActivity">
+        tools:context=".CovidSupportActivity">
 
         <TextView
             android:layout_width="wrap_content"

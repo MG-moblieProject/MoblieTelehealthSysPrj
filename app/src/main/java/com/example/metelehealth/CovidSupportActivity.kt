@@ -5,27 +5,29 @@ import android.app.ProgressDialog
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
-import android.widget.DatePicker
 import android.widget.Toast
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
-import com.google.firebase.database.core.view.View
-import com.example.metelehealth.databinding.ActivityLegalSupportBinding
-import com.example.metelehealth.model.LegalCase
-import java.time.Month
+import com.example.metelehealth.databinding.ActivityCovidSupportBinding
+import com.example.metelehealth.model.CovidCase
+import com.google.firebase.auth.FirebaseAuth
 import java.util.*
 
-class LegalSupportActivity : AppCompatActivity() {
-    private lateinit var binding : ActivityLegalSupportBinding
+class CovidSupportActivity : AppCompatActivity() {
+    private lateinit var binding : ActivityCovidSupportBinding
     private  lateinit var database : DatabaseReference
 
     lateinit var progressDialog : ProgressDialog
-
+    private val firebaseAuth: FirebaseAuth by lazy {
+        FirebaseAuth.getInstance()
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        val currentUser = firebaseAuth.currentUser
+
         // use view binding to avoid boiler plate code collection
-        binding = ActivityLegalSupportBinding.inflate(layoutInflater)
+        binding = ActivityCovidSupportBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         val today = Calendar.getInstance()  //get the date to pick
@@ -48,39 +50,39 @@ class LegalSupportActivity : AppCompatActivity() {
             progressDialog.setCancelable(false)
             progressDialog.show()
 
-            val hospName = binding.etHospName.text.toString()
+            val user = currentUser?.uid
+            val city = binding.etCityName.text.toString()
             val caseType = binding.etTypeOfCase.text.toString()
             val dateOccurrence = binding.etDateOccurrence.text.toString()
-            val involvedPerson = binding.etVictimInvolved.text.toString()
             val briefDesc = binding.etBriefDesc.text.toString()
 
-            database = FirebaseDatabase.getInstance().getReference("LegalCases")
+            database = FirebaseDatabase.getInstance().getReference("CovidCases")
 
-            val LegalCase = LegalCase(hospName,caseType,dateOccurrence,involvedPerson,briefDesc)
+            val covidCase = CovidCase(user,city,caseType,dateOccurrence,briefDesc)
 
-            database.child(hospName).setValue(LegalCase).addOnSuccessListener {
+            if (user != null) {
+                database.child(user).setValue(covidCase).addOnSuccessListener {
 
-                binding.etHospName.text.clear()
-                binding.etTypeOfCase.text.clear()
+                    binding.etCityName.text.clear()
+                    binding.etTypeOfCase.text.clear()
 
-                binding.etVictimInvolved.text.clear()
-                binding.etVictimInvolved.text.clear()
-                binding.etBriefDesc.text.clear()
+                    binding.etBriefDesc.text.clear()
 
-                Toast.makeText(this,"successfully reported....",Toast.LENGTH_LONG).show()
+                    Toast.makeText(this,"successfully reported....",Toast.LENGTH_LONG).show()
 
 
-                Handler().postDelayed({
+                    Handler().postDelayed({
+                        progressDialog.dismiss()
+                    },8000)
+
                     progressDialog.dismiss()
-                },8000)
 
-                progressDialog.dismiss()
+                }.addOnFailureListener {
 
-            }.addOnFailureListener {
+                    Toast.makeText(this,"Failed. Try again..",Toast.LENGTH_LONG).show()
+                    progressDialog.dismiss()
 
-                Toast.makeText(this,"Failed. Try again..",Toast.LENGTH_LONG).show()
-                progressDialog.dismiss()
-
+                }
             }
 
 

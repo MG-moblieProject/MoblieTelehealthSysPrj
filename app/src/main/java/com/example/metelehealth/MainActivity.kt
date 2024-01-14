@@ -23,8 +23,8 @@ class MainActivity : AppCompatActivity() {
          binding.cardCalendar.setOnClickListener {
              startActivity(Intent(this,CalenderActivity::class.java))
          }
-         binding.cardLegalSupport.setOnClickListener {
-             startActivity(Intent(this,LegalSupportActivity::class.java))
+         binding.cardCovidSupport.setOnClickListener {
+             startActivity(Intent(this,CovidSupportActivity::class.java))
          }
          binding.cardIDoctor.setOnClickListener {
              startActivity(Intent(this,DoctorsProfileActivity::class.java))

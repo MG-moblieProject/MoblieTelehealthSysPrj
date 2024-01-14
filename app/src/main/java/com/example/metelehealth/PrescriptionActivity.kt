@@ -53,12 +53,10 @@ class PrescriptionActivity : AppCompatActivity() {
     }
 
     private fun sendPrescription(userName: String) {
-        //val encodedUserName = userName.replace('.',',')
         val currentUser = firebaseAuth.currentUser
         if (currentUser != null) {
             val uid = currentUser.uid
             db = FirebaseDatabase.getInstance().getReference("users")
-            Log.d("FirebaseDatabase", "DatabaseReference: ${db.child(uid)}")
             db.child(uid).get().addOnSuccessListener {
 
                 if (it.exists()) {

@@ -35,7 +35,7 @@ class DoctorsProfileActivity : AppCompatActivity() {
         doctorName = arrayOf(
                 "Dr. Nguyễn Ngọc Bách",
                 "Dr. Vương Ngọc Thiên Thanh",
-                "DR. Ngọc Thành Đạt",
+                "Dr. Phạm Thị Minh Hà",
                 "Dr. Vũ Thiên Ân",
                 "Dr. Võ Thị Minh Tuyền",
                 "Dr. Nguyễn Xuân Thúy Quỳnh",

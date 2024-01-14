@@ -49,7 +49,7 @@
             android:name="com.example.metelehealth.IDoctorActivity"
             android:exported="true" />
         <activity
-            android:name="com.example.metelehealth.LegalSupportActivity"
+            android:name="com.example.metelehealth.CovidSupportActivity"
             android:exported="true" />
         <activity
             android:name="com.example.metelehealth.PrescriptionActivity"

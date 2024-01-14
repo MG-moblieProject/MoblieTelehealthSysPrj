@@ -10,7 +10,7 @@
     android:orientation="vertical"
     android:layout_margin="5dp"
     android:layout_height="wrap_content"
-    tools:context=".LegalSupportActivity">
+    tools:context=".CovidSupportActivity">
 
     <TextView
         android:layout_width="wrap_content"
@@ -32,7 +32,7 @@
 
 
     <EditText
-        android:id="@+id/et_hospName"
+        android:id="@+id/et_cityName"
         android:hint="@string/hospital_city"
         android:layout_width="match_parent"
         android:inputType="text"

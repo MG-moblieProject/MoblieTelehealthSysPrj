@@ -11,7 +11,7 @@
     <string name="medication">medication</string>
     <string name="calendar">Booking</string>
     <string name="idoctor">Doctor</string>
-    <string name="legal_support">Covid Support</string>
+    <string name="covid_support">Covid Support</string>
     <string name="group_therapy">Meeting List</string>
     <string name="schedule_check_up">Schedule Check up</string>
     <string name="welcome_to_your_activities">ACTIVITIES</string>
