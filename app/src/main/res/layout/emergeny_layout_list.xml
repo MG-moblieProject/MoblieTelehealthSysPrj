@@ -43,7 +43,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:textSize="22sp"
-            android:textColor="@color/teal_700"
+            android:textColor="#014677"
             android:textAlignment="center"
             android:layout_margin="10dp"
             android:text="@string/call"

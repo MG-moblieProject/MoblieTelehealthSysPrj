@@ -12,14 +12,14 @@
     tools:context=".SignUpActivity">
 
     <TextView
-        android:layout_gravity="center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:layout_marginTop="10dp"
-        android:textColor="@color/blue"
+        android:text="@string/welcome_to_idoctor"
+        android:textColor="#014677"
         android:textSize="20sp"
-        android:textStyle="bold"
-        android:text="@string/welcome_to_idoctor"/>
+        android:textStyle="bold" />
 
     <ImageView
         android:layout_gravity="center"
@@ -72,7 +72,8 @@
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:layout_marginStart="10dp"
-        android:text="@string/create_account_user"/>
+        android:backgroundTint="#0096FF"
+        android:text="@string/create_account_user" />
     <TextView
         android:id="@+id/tv_member_login"
         android:layout_width="wrap_content"

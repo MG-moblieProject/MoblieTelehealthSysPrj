@@ -19,7 +19,7 @@
         android:layout_margin="5dp"
         android:textStyle="bold"
         android:textSize="18sp"
-        android:textColor="@color/blue"
+        android:textColor="#014677"
         android:layout_gravity="center"/>
 
     <ImageView
@@ -107,8 +107,9 @@
         android:id="@+id/btn_submitCase"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/submit_case"
-        android:layout_margin="10dp"/>
+        android:layout_margin="10dp"
+        android:backgroundTint="#0096FF"
+        android:text="@string/submit_case" />
 
 </androidx.appcompat.widget.LinearLayoutCompat>
 </ScrollView>
